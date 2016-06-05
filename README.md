@@ -23,6 +23,8 @@
 
 styleable如下：
 
+``` xml
+
 	<declare-styleable name="LinearLayoutCompat">
         <attr name="android:orientation" />
         <attr name="android:gravity" />
@@ -40,7 +42,10 @@ styleable如下：
         <attr name="dividerPadding" format="dimension" />
     </declare-styleable>
 
+````
 了解了属性 ， 接下来我们找关键方法 ， 我们知道 ，自定义控件 ， 最核心的地方在绘制 ， 接下来 ， 我们找到onDraw方法
+
+``` java
 
 	@Override
     protected void onDraw(Canvas canvas) {
@@ -53,6 +58,8 @@ styleable如下：
             drawDividersHorizontal(canvas);
         }
     }
+
+```
 	
 我们看到 ， onDraw两个判断语句就搞定了 
 
@@ -64,6 +71,8 @@ styleable如下：
 我们首先来看drawDividerVertical方法 
 
 ### 画水平线
+
+``` java
 
 	void drawDividersVertical(Canvas canvas) {
         final int count = getVirtualChildCount();
@@ -98,7 +107,11 @@ styleable如下：
         }
     }
 
+```
+
 ### 画线
+
+``` java
 
 	void drawHorizontalDivider(Canvas canvas, int top) {
        // 画线 ，计算左右两边的边距 ，顶部距离
@@ -107,7 +120,11 @@ styleable如下：
         mDivider.draw(canvas);
     }
 
+```
+
 接下来看一下 ，showDividers属性
+
+```java 
 
 	protected boolean hasDividerBeforeChildAt(int childIndex) {
         if (childIndex == 0) {
@@ -126,6 +143,8 @@ styleable如下：
         }
         return false;
     }
+
+```
 
 此方法就做了些判断 ， 判断是否需要绘制头部和底部中间的divider
 
