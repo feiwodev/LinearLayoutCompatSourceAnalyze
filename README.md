@@ -15,9 +15,11 @@
 
 通过看源码 ， 我们知道 ， LinearLayoutCompat是一个ViewGroup子类 ， 是一个自定义控件  。写过自定义控件的都知道 ， 我们一般在构造方法中 ， 将控件属性加载进来 ，而我们的LinearLayoutCompat也不例外 ， 他加载的是LinearLayoutCompat这个styleable
 
+``` java
 
 	TintTypedArray a = TintTypedArray.obtainStyledAttributes(context, attrs,
                 R.styleable.LinearLayoutCompat, defStyleAttr, 0);
+```
 
 styleable如下：
 
