@@ -3,7 +3,7 @@
 ###简介
 在编写android程序的时候 ， 大多数人只知道使用系统内置的控件 ， 忽略了系统为我们打的补丁控件 ，可以大大的减少我们重复编码的次数 ，很多功能需要我们自己去实现的 ， google通过v4 , v7 包 ，大部分都打了补丁 ， 方便我们的开发人员  ， 但我们使用里面的控件 ， 却少之又少 ， 一般常用 `ViewPager` , `SwipeRefresh` ，`Fragment`等等 。其实在V7包中 ， google为我们打了很多传统控件的补丁 ， 比如`AppCompatButton` , `AppCompatTextView`等等 。今天我来分析一个比较实用的布局控件 ， `LinearLayoutCompat` ， 这个类 ， 可以很方便的做出设置界面的效果 ， 如
 
-![](https://git.oschina.net/dnqianduan/android_homework/raw/master/%E5%8A%A8%E8%84%91%E5%AE%89%E5%8D%93_%E9%9D%9E%E6%88%91(%E6%9C%B1%E5%8B%87)/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A/LinearLayoutCompat.png?dir=0&filepath=%E5%8A%A8%E8%84%91%E5%AE%89%E5%8D%93_%E9%9D%9E%E6%88%91%28%E6%9C%B1%E5%8B%87%29%2F%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A%2FLinearLayoutCompat.png&oid=a94aa706cea7db38955964b3c78af9386d3ac033&sha=05c512d72a6da23250892becf20dc427c27c895d)
+![](https://raw.githubusercontent.com/zhuyongit/LinearLayoutCompatSourceAnalyze/master/LinearLayoutCompat.png)
 
 那么下面我们就来分析分析这个类 。
 
